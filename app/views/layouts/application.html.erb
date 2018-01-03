@@ -6,9 +6,42 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+      #nav{
+        margin: 0 0 15px 0;
+        padding:10px;
+
+        clear: both;
+        border: 0px solid red;
+      }
+      #navUL{
+        padding:0px;
+        margin:0px;
+        list-style-type: none;
+        text-decoration: none;
+        
+      }
+      .navLI{
+        padding:0px;
+        margin:0 15px 0 0px;
+        float: left;
+      }
+    
+    </style>
+
   </head>
 
   <body>
+    <div id="nav">
+    <ul id="navUL">
+      <li class="navLI"><%= link_to("Home" , "/") %></li>
+      <li class="navLI"><%= link_to("Add Kitty" , "/kitties/new") %></li>
+    </ul>
+    </div>
+    
+
     <%= yield %>
+  
   </body>
 </html>

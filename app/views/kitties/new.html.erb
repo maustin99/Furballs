@@ -1,2 +1,13 @@
 <h1>Kitties#new</h1>
 <p>Find me in app/views/kitties/new.html.erb</p>
+
+
+<h1>Add a Kitty</h1>
+
+<%= form_for @kitty do |f| %>
+    <%= f.text_field(:name, placeholder: "Name", :maxlength => 32) %>
+    <%= f.number_field(:age, placeholder: "Age" , :maxlength => 10 ) %>
+    <%= f.text_field(:breed, placeholder: "Breed" , :maxlength => 32) %>
+    <%= f.text_field(:image, placeholder: "Image URL" ) %>
+    <%= f.submit("Add Kitty") %>
+<% end %>
