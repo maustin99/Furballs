@@ -1,0 +1,29 @@
+
+<h1>Kitties#index</h1>
+<p>Find me in app/views/kitties/index.html.erb</p>
+
+
+<% @kitties %>
+
+<ul>
+<% @kitties.each_with_index do |k, index| %>
+    <li>
+        <%= link_to(k.name, "/kitties/#{k.id}") %>
+    </li>
+<% end %>
+</ul>
+
+
+<!--
+<ul>
+        <% @kitties.each_with_index do |k, index| %>     
+            <li>
+                Name: <%= k.name %><br>
+                Age: <%= k.age %><br>
+                Breed: <%= k.breed %><br>
+                Neutered: <%= k.neutered %><br>
+                <img id="" src="<%= k.image %>" width="200">
+            </li>             
+        <% end %>
+        <!-- equal sign allows you to print Ruby -->
+<!-- </ul>  -->
