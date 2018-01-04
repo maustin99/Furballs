@@ -1,17 +1,26 @@
 <h1>Kitties#show</h1>
-<p>Find me in app/views/kitties/show.html.erb</p>
+<p>Find me in app/views/kitties/show.html.erb
+<br><%= kitties_path %>
+</p>
 
 
 
 
 
-                Name: <%= @oneKitty.name %><br>
-                Age: <%= @oneKitty.age %><br>
-                Breed: <%= @oneKitty.breed %><br>
-                Neutered: <%= @oneKitty.neutered %><br>
-                <img id="" src="<%= @oneKitty.image %>" width="200">
-                <!-- <%= image_tag(@oneKitty.image) %> -->
-                </br>
-                <a href="/kitties/">Return</a>
+
+Name: <%= @oneKitty.name %><br>
+Age: <%= @oneKitty.age %><br>
+Breed: <%= @oneKitty.breed %><br>
+Neutered: <%= @oneKitty.neutered %><br>
+
+<img id="" src="<%= @oneKitty.image %>" width="200">
+<!-- <%= image_tag(@oneKitty.image) %> -->
+</br>
+
+<a href="/kitties/">Return</a>
+<BR>
+<%= link_to("Edit Kitty" , edit_kitty_path(@oneKitty)) %>
+<br>
+<%= link_to("Delete" , kitty_path(@oneKitty), method: "delete", data: {confirm: 'Are you sure?' }) %>
 
     

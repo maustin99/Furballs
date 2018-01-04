@@ -8,6 +8,9 @@
     <%= f.text_field(:name, placeholder: "Name", :maxlength => 32) %>
     <%= f.number_field(:age, placeholder: "Age" , :maxlength => 10 ) %>
     <%= f.text_field(:breed, placeholder: "Breed" , :maxlength => 32) %>
+             Neutered: <%= f.check_box(:neutered) %>
+    <br>
+    <br>
     <%= f.text_field(:image, placeholder: "Image URL" ) %>
     <%= f.submit("Add Kitty") %>
 <% end %>
